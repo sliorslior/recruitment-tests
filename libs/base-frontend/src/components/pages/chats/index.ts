@@ -1,2 +1,2 @@
-export * from './ChatsPage';
+// export * from './ChatsPage';
 export * from './components';

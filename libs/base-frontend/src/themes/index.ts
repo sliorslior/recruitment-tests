@@ -21,7 +21,7 @@ export const useIsNight = () => {
   const [isNight, setIsNight] = useState(false);
 
   useEffect(() => {
-    calculateIsNight().then((isNight) => setIsNight(!isNight));
+    calculateIsNight().then((isNight) => setIsNight(isNight));
   }, []);
 
   return isNight;
