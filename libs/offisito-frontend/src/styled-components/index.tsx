@@ -9,6 +9,7 @@ import {
   Typography,
   TypographyProps,
 } from '@mui/material';
+import { SxProps, Theme } from '@mui/system';
 import { Add, Close } from '@mui/icons-material';
 import styled from '@emotion/styled';
 import { useContext } from 'react';
@@ -79,3 +80,26 @@ export const Btn = (props: ButtonProps) => (
     {props.children}
   </Button>
 );
+
+export const actionBtn = (props: ButtonProps) => (
+  <Button
+    variant="contained"
+    {...props}
+    sx={buttonStyles}
+  >
+    {props.children}
+  </Button>
+);
+
+const buttonStyles: SxProps<Theme> = {
+  backgroundColor: 'green', 
+  color: 'white',
+  '&:hover': {
+    backgroundColor: 'blue',
+  },
+  '&:active': {
+    backgroundColor: 'black',
+  },
+  borderRadius: '4px',
+  padding: '8px 16px',
+};
