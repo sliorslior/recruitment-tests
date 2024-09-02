@@ -9,7 +9,7 @@ import { UserType } from '@offisito-shared';
 import { Btn, CloseButton, PrimaryText, SettingPage } from '@offisito-frontend';
 
 const ChatsPage = lazy(() =>
-  import('@base-frontend').then((module) => ({
+  import('../../../../../libs/base-frontend/src/components/pages/chats/ChatsPage').then((module) => ({
     default: module.ChatsPage,
   })),
 );
