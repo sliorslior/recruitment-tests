@@ -16,6 +16,7 @@ import { useResponsiveness } from '../../../hooks';
 import { TODO } from '@base-shared';
 import { axiosErrorToaster } from '../../../utils';
 import { useIsNight } from '../../../themes';
+import { actionBtn } from '@offisito-frontend'
 
 enum Step {
   init,
@@ -77,12 +78,12 @@ export const AuthPage = <UserType,>({
   tenum,
   client,
   customComponents = {
-    Btn: Button,
+    Btn: actionBtn,
     PrimaryText: Typography,
     Img: Box,
   },
 }: AuthPageProps<UserType>) => {
-  if (!customComponents.Btn) customComponents.Btn = Button;
+  if (!customComponents.Btn) customComponents.Btn = actionBtn;
   if (!customComponents.PrimaryText) customComponents.PrimaryText = Typography;
   if (!customComponents.Img) customComponents.Img = Box;
   const [email, setEmail] = useState<string>('');
